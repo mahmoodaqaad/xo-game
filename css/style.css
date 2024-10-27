@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #ffbe33;
+    --ff2: Pacifico;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee;
+    box-shadow: 0 0 3px 3px inset #bbb;
+    border-radius: 1rem;
+}
+
+
+section {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.main-hading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--ff2);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+}
+
+
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+        padding-left: 7.7rem;
+        padding-right: 7.7rem;
+    }
+}
+
+
+/* medium */
+@media (min-width : 991px) {
+    .container {
+        width: 970px;
+
+    }
+}
+
+/* large */
+
+
+@media (min-width : 1200px) {
+    .container {
+        width: 91%;
+    }
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    background-color: #111;
+    border-radius: 6px;
+
+}
+
+.content .title {
+    background-color: #ffa20a;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+    transition: 0.2s;
+}
+
+.content .boxs {
+    padding: 10px;
+}
+
+.content .boxs .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .boxs .square {
+    margin: 10px;
+    background-color: #eee;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    color: #65160b;
+    font-weight: bold;
+    transition: 0.2s;
+}
