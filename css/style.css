@@ -51,6 +51,22 @@ section {
     font-size: 2rem;
 }
 
+.result {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result h5 {
+    gap: 10px;
+    display: flex;
+    color: white;
+    padding: 15px;
+
+
+    font-size: 2rem;
+
+}
+
 .container {
     width: 100%;
     overflow-x: hidden;
