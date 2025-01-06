@@ -2,6 +2,14 @@ let squars = document.querySelectorAll(".square")
 let title = document.querySelector(".title h4")
 let play = "X"
 let oldplay
+const Xtag = document.querySelector(".x-res p")
+const Otag = document.querySelector(".o-res p")
+
+const reslut = JSON.parse(localStorage.getItem("XO")) || { x: 0, o: 0 }
+Xtag.innerHTML = reslut.x
+Otag.innerHTML = reslut.o
+
+reslut.x > reslut.o ? Xtag.parentElement.style.color = "green" : reslut.x > reslut.o ? Otag.parentElement.style.color = "green" : ""
 squars.forEach((squar, i) => {
 
     squar.onclick = () => {
@@ -61,6 +69,16 @@ function good(one, tow, three) {
     document.querySelector(".boxs").style.pointerEvents = "none"
     title.style.fontSize = "40px"
     title.textContent = oldplay + " is winner"
+
+
+    const resultX = reslut.x
+    const resultO = reslut.o
+    const newResult = {
+        x: oldplay === "X" ? resultX + 1 : resultX,
+        o: oldplay === "O" ? resultO + 1 : resultO
+
+    }
+    localStorage.setItem("XO", JSON.stringify(newResult))
     setInterval(() => {
         title.textContent += " ."
     }, 500);
